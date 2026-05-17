@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Сбор информации из интернета</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Сбор информации из интернета</h1>
+
+  <div class="search-box">
+    <input type="text" id="keywordInput" placeholder="Введите ключевое слово">
+    <button id="searchBtn">Найти URL</button>
+  </div>
+
+  <div id="urlSection" style="display:none;">
+    <h3>Найденные URL</h3>
+    <div id="urlList"></div>
+    <button id="downloadBtn" disabled>Скачать выбранный</button>
+    <div id="progressContainer" style="display:none;">
+      <div class="progress-bar"><div id="progressFill"></div></div>
+      <p id="progressText"></p>
+    </div>
+  </div>
+
+  <div id="storageSection">
+    <h3>Сохранённые страницы</h3>
+    <ul id="savedList"></ul>
+    <div id="contentView"></div>
+  </div>
+
+  <div id="errorBox" class="error" style="display:none;"></div>
+
+  <script src="client.js"></script>
+</body>
+</html>
